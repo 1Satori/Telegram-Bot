@@ -67,7 +67,7 @@ func (s Storage) PickRandom(userName string) (page *storage.Page, err error) {
 	return s.decodePage(filepath.Join(filePath, file.Name()))
 }
 
-func (s Storage) Romeve(p *storage.Page) error {
+func (s Storage) Remove(p *storage.Page) error {
 	fileName, err := fileName(p)
 	if err != nil {
 		return fmt.Errorf("file name: %v", err)
